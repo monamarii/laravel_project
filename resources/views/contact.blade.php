@@ -6,11 +6,10 @@
     <title>AAAAHHHHH</title>
 </head>
 <body>
-<h1>AAAAHHHHH</h1>
+<h1>Contact us</h1>
 
 <div>
-    <a href="/about">About us</a> <br>
-    <a href="/contact">Contact us</a>
+    <a href="/">Return home</a>
 </div>
 </body>
 </html>
