@@ -13,3 +13,8 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::View('/', 'welcome', [
+    'greeting' => 'Hello',
+    'person' => request('person', 'World'),
+]);
