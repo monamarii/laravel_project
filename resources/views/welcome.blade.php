@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AAAAHHHHH</title>
-</head>
-<body>
-<h1>AAAAHHHHH</h1>
-
-<div>
-    <a href="/about">About us</a> <br>
-    <a href="/contact">Contact us</a>
-</div>
-</body>
-</html>
+<x-layout title="Welcome">
+    <h1>Welcome to Our Site</h1>
+</x-layout>
