@@ -12,7 +12,7 @@ class IdeaRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true; // hiljem lisan kasutaja autentimise
+        return true; 
     }
 
     /**
@@ -23,7 +23,7 @@ class IdeaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'description' => ['required', 'min:15'],
+            'description' => ['required', 'min:10'],
         ];
     }
 
@@ -31,7 +31,7 @@ class IdeaRequest extends FormRequest
     {
         return [
             'description.required' => 'ATTRIBUTE PLS!!',
-            'description.min' => '15 chars min, pls!!',
+            'description.min' => ':min chars min, pls!!',
         ];
     }
 }
