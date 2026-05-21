@@ -13,6 +13,7 @@
     </div>
     @else
     <p class="mt-8">No ideas yet.</p>
-    <a role="button" class="btn" href="/ideas/create">new idea</a>
     @endif
+
+    <p class="mt-6"><a role="button" class="btn" href="/ideas/create">Create a new one</a></p>
 </x-layout>

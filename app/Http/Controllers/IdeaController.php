@@ -12,7 +12,9 @@ class IdeaController extends Controller
      */
     public function index()
     {
-        $ideas = Idea::all();
+        $ideas = Idea::where('user_id', auth()->id())->get();
+
+        $ideas = auth::user()->ideas;
 
         return view('ideas.index', [
             'ideas' => $ideas,
@@ -32,9 +34,10 @@ class IdeaController extends Controller
      */
     public function store(IdeaRequest $request)
     {
-
         Idea::create([
-            'description' => request('description'),
+            'description' => $request->validated()['description'],
+            'status' => 'pending',
+            'user_id' => auth()->id(),
         ]);
 
         return redirect('/ideas');
