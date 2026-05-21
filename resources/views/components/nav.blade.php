@@ -13,7 +13,7 @@
                 <li><a href="/frogs">frogs</a></li>
             </ul>
         </div>
-        <a class="btn btn-ghost text-xl" href="/frogs">Frogs & stuff</a>
+        <a class="btn btn-ghost text-xl" href="/frogs">Frogs</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 gap-2">
@@ -22,7 +22,19 @@
             <li><a href="/frogs">frogs</a></li>
         </ul>
     </div>
-    <div class="navbar-end">
-        <a class="btn">log in</a>
+    <div class="navbar-end space-x-2">
+        @guest
+        <a class="btn btn-primary" href="/register">Register</a>
+        <a class="btn btn-secondary" href="/login">Log In</a>
+        @endguest
+
+        @auth
+        <form method="POST" action="/logout">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-ghost">Log Out</button>
+        </form>
+        @endauth
+
     </div>
 </div>

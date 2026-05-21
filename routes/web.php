@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\IdeaController;
 use App\Http\Controllers\FrogController;
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\SessionsController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Idea;
 
@@ -22,3 +24,13 @@ Route::delete('/ideas/{idea}', [IdeaController::class, 'destroy']);
 Route::get('/frogs', [FrogController::class, 'index']);
 Route::get('/frogs/random', [FrogController::class, 'random']);
 
+// Authentication
+Route::get('/register', [RegisteredUserController::class, 'create']);
+Route::post('/register', [RegisteredUserController::class, 'store']);
+
+// Log out
+Route::delete('/logout', [SessionsController::class, 'destroy']);
+
+// Log in
+Route::get('/login', [SessionsController::class, 'create']);
+Route::post('/login', [SessionsController::class, 'store']);
