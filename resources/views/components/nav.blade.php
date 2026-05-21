@@ -11,6 +11,9 @@
                 <li><a href="/ideas/">your ideas</a></li>
                 <li><a href="/ideas/create">new idea</a></li>
                 <li><a href="/frogs">frogs</a></li>
+                @can('admin')
+                    <li><a href="/admin">admin</a></li>
+                @endcan
             </ul>
         </div>
         <a class="btn btn-ghost text-xl" href="/frogs">Frogs</a>
@@ -20,6 +23,9 @@
             <li><a href="/ideas/">your ideas</a></li>
             <li><a href="/ideas/create">new idea</a></li>
             <li><a href="/frogs">frogs</a></li>
+            @can('admin')
+            <li><a href="/admin">admin</a></li>
+            @endcan
         </ul>
     </div>
     <div class="navbar-end space-x-2">

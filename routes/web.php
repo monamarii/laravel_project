@@ -36,3 +36,13 @@ Route::middleware('guest')->group(function () {
     Route::get('/login', [SessionsController::class, 'create'])->name('login');
     Route::post('/login', [SessionsController::class, 'store']);
 });
+
+// Admin
+Route::get('/admin', function () {
+    return view('admin');
+})->middleware(['auth', 'can:admin']);
+
+// Admin
+Route::get('/admin', function () {
+    return 'Private admin only page';
+})->middleware(['auth', 'can:admin']);
