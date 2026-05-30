@@ -17,6 +17,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | DaisyUI Theme
+    |--------------------------------------------------------------------------
+    |
+    | The default DaisyUI theme name used by the application's layout. You
+    | can set this via the DAISY_THEME environment variable or change the
+    | default below.
+    |
+    */
+
+    'daisy_theme' => env('DAISY_THEME', 'mytheme'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |

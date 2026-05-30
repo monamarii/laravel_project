@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Idea;
 
 Route::get('/', function () {
-    return 'Placeholder for home page';
+    return 'Welcome to the page!';
 });
 
 // Ideas
